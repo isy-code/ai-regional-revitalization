@@ -21,13 +21,19 @@
 - [x] AI스마트팜 콜라주를 독립 이미지로 분리 (9종 — 목표 8종 + `smartfarm-drone`)
 - [x] AI관광 콜라주를 독립 이미지로 분리 (11종 — 목표 8종 + `tourism-region` / `tourism-kiosk` / `tourism-ar-guide`)
 - [x] 모든 PNG 를 WebP 로 변환 (총 51개 / 약 4.8MB)
-- [ ] 나가오카대학 공식 로고 확보 → `assets/logos/nagaoka-university-logo.svg`
-- [ ] Vision Inside 공식 로고 확보 → `assets/logos/vision-inside-logo.svg`
+- [x] 나가오카대학 공식 로고 적용 → `assets/logos/nagaoka-university-logo.png`
+- [x] Vision Inside 공식 로고 적용 → `assets/logos/vision-inside-logo.png`
 - [ ] 문의처 정보 최종 검수 (담당자 확인 필요)
 
-> 로고 2종은 AI 생성 이미지를 사용하지 않는다는 원칙에 따라 **아직 적용하지 않았다.**
-> 현재 `contact.html` 은 기관명을 텍스트 워드마크로 표기하고, 해당 위치에 `TODO(에셋)` 주석을 남겨 두었다.
-> 공식 원본 파일을 받으면 `assets/logos/` 에 넣고 `.org-mark` 블록을 교체한다.
+### 로고 처리 메모
+- 담당자가 제공한 **공식 원본 PNG** 를 사용한다. AI 생성 이미지는 로고로 사용하지 않는다.
+- 원본은 `IMAGE_MAP.md` 가 상정한 SVG 가 아니라 PNG 로 전달되어 파일 확장자만 `.png` 로 맞췄다.
+  로고의 형태·색·비율은 변형하지 않았고, 다음 두 가지만 처리했다.
+  1. 모서리 flood fill 로 근사백색 배경을 순백(#fff)으로 정리 — 흰 카드 배경에 이음매 없이 얹기 위함
+  2. 균일한 흰 여백 제거 후 2px 균일 여백 재부여
+- 표시 크기는 `.org-mark__logo` 에서 높이 기준(Desktop 56px / Mobile 46px)으로만 지정하고 폭은 `auto` 다.
+- 로고 이미지가 기관명 문자를 포함하므로 `alt` 에 기관명을 그대로 담았다.
+- 추후 **공식 SVG** 를 받으면 같은 경로에 교체하고 `contact.html` 의 `src` 확장자만 바꾸면 된다.
 
 ---
 

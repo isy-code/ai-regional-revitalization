@@ -197,8 +197,8 @@ AI Collaboration
 - `assets/images/contact/contact-korea-japan-network.webp`
 
 ### 실제 로고 파일 별도 준비
-- `assets/logos/nagaoka-university-logo.svg`
-- `assets/logos/vision-inside-logo.svg`
+- `assets/logos/nagaoka-university-logo.png`
+- `assets/logos/vision-inside-logo.png`
 
 ### 아이콘
 전화, 팩스, 이메일, 주소, AI, 컨설팅, 연구, 교육, 사업개발 아이콘은 SVG 아이콘 라이브러리를 사용한다.

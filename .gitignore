@@ -2,6 +2,9 @@
 *.zip
 _src/
 
+# 루트에 놓인 원본 소재 — assets/ 로 가공해 사용하므로 배포에는 불필요
+/*.png
+
 # OS / 편집기
 Thumbs.db
 ehthumbs.db

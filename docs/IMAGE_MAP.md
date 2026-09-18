@@ -117,9 +117,9 @@
 | `contact-city-skyline.png` | `contact-city-skyline.webp` | 하단 배너 |
 | `contact-korea-japan-network.png` | `contact-korea-japan-network.webp` | 한일 협력 메시지 |
 
-공식 로고 별도:
-- `assets/logos/nagaoka-university-logo.svg`
-- `assets/logos/vision-inside-logo.svg`
+공식 로고 별도(실제 전달본은 PNG):
+- `assets/logos/nagaoka-university-logo.png`
+- `assets/logos/vision-inside-logo.png`
 
 ---
 

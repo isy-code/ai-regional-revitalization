@@ -582,6 +582,10 @@
     font-size: 25px;
   }
 
+  .org-mark__logo {
+    height: 46px;
+  }
+
   .person__name {
     font-size: 22px;
   }
