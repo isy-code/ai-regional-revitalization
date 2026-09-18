@@ -1,0 +1,27 @@
+# DOCUMENT_MANIFEST — 포함 문서
+
+- `AGENTS.md`
+- `CLAUDE.md`
+- `IMPLEMENTATION_PROMPT.md`
+- `README.md`
+- `docs/00_DECISIONS.md`
+- `docs/AI_INSTRUCTIONS.md`
+- `docs/ASSET_CHECKLIST.md`
+- `docs/DEPLOYMENT.md`
+- `docs/DESIGN.md`
+- `docs/DEVELOPMENT.md`
+- `docs/IMAGE_MAP.md`
+- `docs/IMPLEMENTATION_PLAN.md`
+- `docs/PAGE_SPEC.md`
+- `docs/PRD.md`
+- `docs/PROJECT_STRUCTURE.md`
+- `docs/QA_CHECKLIST.md`
+- `docs/SEO_ACCESSIBILITY.md`
+- `docs/VISUAL_REFERENCE.md`
+- `docs/cases_content.md`
+- `docs/company_content.md`
+- `docs/contact_content.md`
+- `docs/parking_content.md`
+- `docs/smartfarm_content.md`
+- `docs/tourism_content.md`
+- `references/README.md`

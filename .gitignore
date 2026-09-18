@@ -1,0 +1,15 @@
+# 원본 에셋 압축본 / 작업용 추출 폴더 (배포에 불필요)
+*.zip
+_src/
+
+# OS / 편집기
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
+# 배포 도구
+.vercel

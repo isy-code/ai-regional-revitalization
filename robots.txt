@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ai-regional-revitalization.vercel.app/sitemap.xml

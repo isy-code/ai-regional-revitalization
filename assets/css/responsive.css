@@ -1,0 +1,634 @@
+/* ==========================================================================
+   responsive.css — Breakpoint
+   Desktop >=1200 / Small Desktop 1024~1199 / Tablet 768~1023 / Mobile <=767
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Small Desktop — 1024 ~ 1199
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1199px) {
+  .site-nav a {
+    padding: 0 10px;
+    font-size: 14px;
+  }
+
+  .site-nav a::after {
+    left: 10px;
+    right: 10px;
+  }
+
+  .site-brand {
+    font-size: 20px;
+  }
+
+  .panel {
+    padding: 36px 30px 40px;
+  }
+
+  .page-hero__copy h1 {
+    font-size: 40px;
+  }
+
+  .grid--5,
+  .grid--6,
+  .grid--7 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .day-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .concierge-flow,
+  .module-flow,
+  .system-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .module-card + .module-card::before,
+  .system-node + .system-node::before {
+    display: none;
+  }
+
+  .contact-lead {
+    grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
+  }
+
+  .contact-lead__globe {
+    display: none;
+  }
+
+  .inquiry-areas {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tablet — 768 ~ 1023
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1023px) {
+  :root {
+    --header-h: 68px;
+    --hero-h: 210px;
+    --footer-h: 170px;
+    --section-gap: 44px;
+    --card-gap: 16px;
+  }
+
+  .container,
+  .site-footer__inner {
+    width: calc(100% - 40px);
+  }
+
+  .site-nav {
+    position: absolute;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    display: grid;
+    gap: 0;
+    padding: 6px 20px 14px;
+    background: #fff;
+    border-bottom: 1px solid var(--border-soft);
+    box-shadow: 0 12px 24px rgba(8, 43, 100, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 200ms ease, transform 200ms ease, visibility 200ms;
+  }
+
+  .site-nav.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .site-nav a {
+    height: auto;
+    padding: 13px 4px;
+    font-size: 16px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+
+  .site-nav a:last-child {
+    border-bottom: 0;
+  }
+
+  .site-nav a::after {
+    left: 4px;
+    right: auto;
+    bottom: 10px;
+    width: 26px;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .panel {
+    padding: 30px 22px 34px;
+  }
+
+  .panel-title {
+    font-size: 27px;
+  }
+
+  .page-hero__copy h1 {
+    font-size: 38px;
+  }
+
+  .page-hero__inner {
+    grid-template-columns: minmax(0, 1fr) 240px;
+    gap: 28px;
+  }
+
+  .page-hero__key {
+    font-size: 19px;
+  }
+
+  .section-title {
+    font-size: 23px;
+  }
+
+  .grid--3,
+  .grid--4,
+  .grid--5,
+  .grid--6,
+  .grid--7 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid--wide-left,
+  .grid--wide-right,
+  .grid--sidebar {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .bridge,
+  .roadmap {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .split {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .quote-banner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quote-banner__media {
+    order: -1;
+    /* aspect-ratio 와 min-height 를 함께 쓰면 폭이 비율에서 역산되어 넘칠 수 있다 */
+    min-height: 0;
+    aspect-ratio: 16 / 7;
+  }
+
+  .cases-intro {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding: 24px;
+  }
+
+  .cases-intro__title strong {
+    font-size: 28px;
+  }
+
+  .day-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .concierge-flow,
+  .module-flow,
+  .system-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .process-flow,
+  .process-flow--3,
+  .process-flow--5,
+  .process-flow--7 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .process-flow--5 > li + li::before,
+  .process-flow--7 > li + li::before {
+    display: none;
+  }
+
+  .contact-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact-card__media {
+    order: -1;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  .contact-lead {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .contact-lead__body {
+    padding-left: 0;
+    padding-top: 18px;
+    border-left: 0;
+    border-top: 1px solid var(--border-blue);
+  }
+
+  .contact-lead__title {
+    font-size: 34px;
+  }
+
+  .brand-box {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .wide-banner {
+    aspect-ratio: 16 / 7;
+  }
+
+  .wide-banner__overlay {
+    padding: 0 26px;
+  }
+
+  .snow-hero__title {
+    font-size: 38px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile — <= 767
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  :root {
+    --header-h: 64px;
+    --hero-h: 230px;
+    --footer-h: 160px;
+    --section-gap: 32px;
+    --card-gap: 14px;
+    --radius-panel: 12px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  .container,
+  .site-footer__inner {
+    width: calc(100% - 32px);
+  }
+
+  .site-brand {
+    font-size: 17px;
+    letter-spacing: -0.03em;
+  }
+
+  .site-brand__mark {
+    width: 24px;
+    height: 24px;
+  }
+
+  .page-hero__inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    padding-block: 28px;
+  }
+
+  .page-hero::before {
+    background: linear-gradient(
+      170deg,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(255, 255, 255, 0.88) 55%,
+      rgba(215, 233, 255, 0.72) 100%
+    );
+  }
+
+  .page-hero__copy h1 {
+    font-size: 32px;
+  }
+
+  .page-hero__copy p {
+    margin-top: 10px;
+    font-size: 15px;
+  }
+
+  .page-hero__message {
+    grid-template-columns: auto 1px auto;
+    justify-content: start;
+    gap: 14px;
+  }
+
+  .page-hero__key {
+    font-size: 17px;
+    text-align: left;
+  }
+
+  .page-hero__note {
+    font-size: 13px;
+  }
+
+  .page-body {
+    padding-block: 24px 44px;
+  }
+
+  .panel {
+    padding: 24px 16px 28px;
+  }
+
+  .panel-title {
+    font-size: 22px;
+  }
+
+  .panel-sub {
+    font-size: 14px;
+  }
+
+  .section-heading {
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .section-sub {
+    flex-basis: 100%;
+    font-size: 13px;
+  }
+
+  .subhead {
+    font-size: 16px;
+  }
+
+  /* 모든 주요 카드 1열 */
+  .grid--2,
+  .grid--3,
+  .grid--4,
+  .grid--5,
+  .grid--6,
+  .grid--7,
+  .roadmap,
+  .module-flow,
+  .system-row,
+  .concierge-flow,
+  .cases-intro__marks {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cases-intro__marks {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .day-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .day-card {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .day-card__no {
+    margin-bottom: 0;
+  }
+
+  /* 프로세스 세로화 */
+  .process-flow,
+  .process-flow--3,
+  .process-flow--5,
+  .process-flow--7 {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .process-flow > li {
+    width: 100%;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr);
+    grid-template-areas:
+      "icon num"
+      "icon title"
+      "icon text";
+    column-gap: 12px;
+    row-gap: 2px;
+  }
+
+  .process-flow .step-icon {
+    grid-area: icon;
+    margin: 0;
+  }
+
+  .process-flow .step-num { grid-area: num; }
+  .process-flow .step-title { grid-area: title; }
+  .process-flow .step-text { grid-area: text; }
+
+  .process-flow--5 > li + li::before,
+  .process-flow--7 > li + li::before {
+    display: block;
+    left: 50%;
+    top: -16px;
+    margin: 0 0 0 -5px;
+    transform: rotate(135deg);
+  }
+
+  .flow-chain {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .flow-chain li + li::before {
+    content: "↓";
+    display: block;
+    margin: 0 0 4px;
+  }
+
+  .coop-step {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .coop-step__no {
+    justify-self: start;
+    padding: 0 16px;
+  }
+
+  .coop-step__flow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .coop-step__flow li + li::before {
+    content: "↓";
+    display: block;
+    margin: 0 0 2px;
+  }
+
+  .ba-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ba-arrow {
+    transform: rotate(90deg);
+    height: 34px;
+  }
+
+  .org-node,
+  .org-node--top,
+  .org-node--unit {
+    flex-basis: 100%;
+  }
+
+  .week-card {
+    grid-template-columns: 62px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .week-card__no {
+    height: 56px;
+  }
+
+  .week-card__no b {
+    font-size: 20px;
+  }
+
+  .quote-banner__text {
+    padding: 24px 20px;
+  }
+
+  .quote-banner__text p {
+    font-size: 18px;
+  }
+
+  .wide-banner {
+    aspect-ratio: 4 / 3;
+  }
+
+  .wide-banner__overlay {
+    padding: 0 20px;
+    background: linear-gradient(
+      180deg,
+      rgba(5, 29, 69, 0.35) 0%,
+      rgba(5, 29, 69, 0.82) 100%
+    );
+    justify-content: flex-end;
+    padding-bottom: 22px;
+  }
+
+  .wide-banner__overlay b {
+    font-size: 19px;
+  }
+
+  .wide-banner__overlay span {
+    font-size: 14px;
+  }
+
+  .snow-hero {
+    min-height: 260px;
+  }
+
+  .snow-hero__inner {
+    padding: 24px 20px;
+  }
+
+  .snow-hero__title {
+    font-size: 30px;
+  }
+
+  .snow-hero__keywords {
+    font-size: 15px;
+  }
+
+  .contact-lead__title {
+    font-size: 28px;
+  }
+
+  .contact-lines li {
+    grid-template-columns: 30px auto minmax(0, 1fr);
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  .contact-lines .key {
+    font-size: 13px;
+  }
+
+  .contact-lines--address li {
+    grid-template-columns: 30px minmax(0, 1fr);
+  }
+
+  .contact-lines .ico {
+    width: 30px;
+    height: 30px;
+  }
+
+  .contact-card__body {
+    padding: 20px 16px 24px;
+  }
+
+  .org-mark__name {
+    font-size: 25px;
+  }
+
+  .person__name {
+    font-size: 22px;
+  }
+
+  .inquiry-areas {
+    padding: 20px 16px;
+  }
+
+  .coop-banner__inner {
+    padding: 22px 18px;
+  }
+
+  .coop-banner__main {
+    font-size: 18px;
+  }
+
+  .coop-banner__right {
+    text-align: left;
+  }
+
+  .site-footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding-block: 32px;
+  }
+
+  .site-footer__brand {
+    font-size: 17px;
+  }
+
+  .data-table {
+    min-width: 480px;
+  }
+}
+
+/* 아주 좁은 화면 (375px 이하) 보정 */
+@media (max-width: 380px) {
+  .site-brand {
+    font-size: 15px;
+  }
+
+  .page-hero__copy h1 {
+    font-size: 29px;
+  }
+
+  .panel {
+    padding: 22px 14px 26px;
+  }
+}
